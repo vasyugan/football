@@ -31,7 +31,7 @@ This method doesn't support game rendering on screen - if you want to see the ga
 
 ### Using Docker
 
-This is the recommended way to avoid incompatible package versions.
+This is the recommended way for Linux-based systems to avoid incompatible package versions.
 Instructions are available [here](gfootball/doc/docker.md).
 
 ### On your computer
@@ -66,12 +66,14 @@ python -m pip install --upgrade pip setuptools psutil wheel
 
 
 #### 2. Install GFootball
-#### 2a. From PyPi package
+#### Option a. From PyPi package (recommended)
 ```shell
 python3 -m pip install gfootball
 ```
 
-#### 2b. Installing from sources using GitHub repository
+#### Option b. Installing from sources using GitHub repository 
+(On Windows you have to install additional tools and set an environment variable, see 
+[Compiling Engine](gfootball/doc/compile_engine.md#windows) for detailed instructions.)
 
 ```shell
 git clone https://github.com/google-research/football.git
@@ -91,9 +93,8 @@ Next, build the game engine and install dependencies:
 python3 -m pip install .
 ```
 This command can run for a couple of minutes, as it compiles the C++ environment in the background.
+If you face any problems, first check [Compiling Engine](gfootball/doc/compile_engine.md) documentation and search GitHub issues.
 
-To compile the engine on Windows you have to install additional tools and set environment variables. See 
-[Compiling Engine](gfootball/doc/compile_engine.md#windows) for detailed instructions.
 
 #### 3. Time to play!
 ```shell
